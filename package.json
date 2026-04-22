@@ -1,0 +1,13 @@
+{
+  "name": "github-actions-starter",
+  "version": "1.0.0",
+  "description": "A minimal full-stack project to learn **CI/CD with GitHub Actions**.   The backend is already built and tested. **Your job: write the workflow.**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

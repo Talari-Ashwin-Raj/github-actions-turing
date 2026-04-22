@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Actions Starter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="logo-icon">⚙️</span>
+      <span>CI/CD Starter</span>
+    </div>
+    <div class="badge" id="status-badge">Checking API…</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>GitHub Actions<br /><span class="accent">Playground</span></h1>
+      <p class="subtitle">A minimal project to practice CI/CD workflows. Build, test, and lint — all in GitHub Actions.</p>
+    </section>
+
+    <div class="cards">
+      <!-- Greet Card -->
+      <div class="card">
+        <div class="card-label">GET /greet/:name</div>
+        <h2>Greet</h2>
+        <p>Send your name to the API and get a greeting back.</p>
+        <div class="input-row">
+          <input id="greet-input" type="text" placeholder="Your name" maxlength="32" />
+          <button id="greet-btn">Send</button>
+        </div>
+        <div class="result" id="greet-result">—</div>
+      </div>
+
+      <!-- Add Card -->
+      <div class="card">
+        <div class="card-label">POST /add</div>
+        <h2>Add Numbers</h2>
+        <p>POST two numbers to the API and get their sum.</p>
+        <div class="input-row">
+          <input id="add-a" type="number" placeholder="a" />
+          <span class="plus">+</span>
+          <input id="add-b" type="number" placeholder="b" />
+          <button id="add-btn">Send</button>
+        </div>
+        <div class="result" id="add-result">—</div>
+      </div>
+    </div>
+
+    <!-- Pipeline visual -->
+    <section class="pipeline">
+      <h2>Your CI/CD Pipeline</h2>
+      <p>This is what your <code>workflow.yml</code> will automate on every push.</p>
+      <div class="stages">
+        <div class="stage">
+          <div class="stage-icon">📦</div>
+          <div class="stage-name">Install</div>
+          <code>npm ci</code>
+        </div>
+        <div class="arrow">→</div>
+        <div class="stage">
+          <div class="stage-icon">🔍</div>
+          <div class="stage-name">Lint</div>
+          <code>npm run lint</code>
+        </div>
+        <div class="arrow">→</div>
+        <div class="stage">
+          <div class="stage-icon">🧪</div>
+          <div class="stage-name">Test</div>
+          <code>npm test</code>
+        </div>
+        <div class="arrow">→</div>
+        <div class="stage">
+          <div class="stage-icon">✅</div>
+          <div class="stage-name">Pass</div>
+          <code>green check</code>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>GitHub Actions Starter · Built for learning CI/CD</span>
+    <a href="https://docs.github.com/en/actions" target="_blank">GHA Docs ↗</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
